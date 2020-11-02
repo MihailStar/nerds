@@ -1,0 +1,9 @@
+<div class="heading">
+    <div class="wrapper">
+        {% if page === 'index' %}
+        <h1 class="visually-hidden">{{ pages[page].title }}</h1>
+        {% else %}
+        <h1 class="heading__title">{{ pages[page].title }}</h1>
+        {% endif %}
+    </div>
+</div>

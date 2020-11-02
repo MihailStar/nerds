@@ -1,0 +1,16 @@
+<section class="advantages">
+    <h2 class="visually-hidden">Преимущества</h2>
+
+    <div class="wrapper">
+        <div class="advantages__list" id="carousel">
+            {% for item in advantages %}
+            <div class="advantages__item" style="background-image: url('{{ item.image }}')">
+                <h3 class="advantages__title">{{ item.title | safe }}</h3>
+                <p class="advantages__description">{{ item.description | safe }}</p>
+
+                <a class="button advantages__button" href="{{ item.link }}">Узнать больше</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

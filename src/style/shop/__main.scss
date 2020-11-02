@@ -1,0 +1,13 @@
+.shop {
+    display: block; // fixed for IE11
+    padding-top: 55px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@import './_filters.scss';
+
+@import './_catalog.scss';

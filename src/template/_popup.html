@@ -1,0 +1,22 @@
+<section class="write-us mfp-hide" id="popup">
+    <h2 class="write-us__title">Напишите нам</h2>
+
+    <form class="write-us-form" action="/echo" method="post">
+        <p class="write-us-form__column write-us-form__column_left">
+            <label class="write-us-form__label" for="name">Ваше имя:</label>
+            <input class="write-us-form__input" id="name" name="name" type="text" placeholder="Имя Фамилия" required>
+        </p>
+        <p class="write-us-form__column write-us-form__column_right">
+            <label class="write-us-form__label" for="email">Ваш e-mail:</label>
+            <input class="write-us-form__input" id="email" name="email" type="email" placeholder="email@example.com" required>
+        </p>
+        <p class="write-us-form__column write-us-form__column_main">
+            <label class="write-us-form__label" for="text">Текст письма:</label>
+            <textarea class="write-us-form__input write-us-form__input_textarea" id="text" name="text" placeholder="В свободной форме" required></textarea>
+        </p>
+
+        <button class="button write-us-form__button" type="submit">Отправить</button>
+    </form>
+
+    <button class="write-us__button-close" id="close-popup" type="button"><span class="visually-hidden">Закрыть</span></button>
+</section>

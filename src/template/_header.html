@@ -1,0 +1,30 @@
+<header class="header">
+    <div class="wrapper header__wrapper">
+        <nav class="navigation">
+            {% if page === 'index' %}
+            <a class="navigation__logotype"><img class="navigation__logotype-image" src="./image/logotype.svg" alt="Логотип {{ company.name }}" width="160" height="65"></a>
+            {% else %}
+            <a class="navigation__logotype" href="./index.html"><img class="navigation__logotype-image" src="./image/logotype.svg" alt="Логотип {{ company.name }}" width="160" height="65"><span class="visually-hidden">Главная</span></a>
+            {% endif %}
+
+            <ul class="navigation__list">
+                {% for item in navigation %}
+                {% if loop.index === pages[page].activeMenuItem %}
+                <li class="navigation__item navigation__item_active">
+                    <a class="navigation__link">{{ item.title }}</a>
+                </li>
+                {% else %}
+                <li class="navigation__item">
+                    <a class="navigation__link" href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <div class="cart">
+            {{ mixin.icon('cart', '16', '16') }}
+            <a class="cart__link" href="javascript:void(0);">Корзина</a>
+        </div>
+    </div>
+</header>

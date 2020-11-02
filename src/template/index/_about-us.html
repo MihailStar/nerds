@@ -1,0 +1,41 @@
+<section class="about-us">
+    <h2 class="visually-hidden">О нас</h2>
+
+    <div class="wrapper wrapper_border about-us__wrapper" style="background-image: url('./image/logotype.jpg')">
+        <div class="about-us__column about-us__column_main">
+            <b class="about-us__lead">Мы — маленькая, но гордая дизайн-студия из Краснодара</b>
+            <p class="about-us__description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы</p>
+        </div>
+
+        <div class="about-us__column about-us__column_left">
+            <h3 class="about-us__title">Выполняем заказы на разработку:</h3>
+
+            <ul class="about-us__list">
+                {% for item in develop %}
+                <li class="about-us__item">{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="about-us__column about-us__column_right">
+            <h3 class="about-us__title about-us__title_center">С 2004 года любим точность во всем:</h3>
+
+            <table class="about-us__table">
+                <tbody>
+                    <tr id="animate-numbers">
+                        {% for item in accuracy %}
+                        <td class="about-us__td"><span class="about-us__percent">{{ item.percent }}</span><sup class="about-us__sup">%</sup></td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        {% for item in accuracy %}
+                        <th class="about-us__th">{{ item.description }}</th>
+                        {% endfor %}
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</section>

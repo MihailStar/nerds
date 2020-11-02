@@ -1,0 +1,17 @@
+<section class="services">
+    <h2 class="visually-hidden">Услуги</h2>
+
+    <div class="wrapper wrapper_border">
+        <ul class="services__list">
+            {% for item in services %}
+            <li class="services__item">
+                <h3 class="services__title">{{ item.title }}</h3>
+                <img class="services__image" src="{{ item.image }}" alt="{{ item.title }}" width="{{ item.width }}" height="{{ item.height }}">
+                <p class="services__description">{{ item.description | safe }}</p>
+
+                <a class="button{{ ' button_' + item.buttonColor if item.buttonColor }} services__button" href="{{ item.link }}">Заказать</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

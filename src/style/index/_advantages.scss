@@ -1,0 +1,103 @@
+.advantages {
+    $height: 414px;
+    position: relative;
+    background-color: #eee;
+
+    &__list {
+        overflow: hidden;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        height: $height;
+    }
+
+    &__item {
+        display: block;
+        padding-top: 62px;
+        min-height: $height;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 26px;
+        color: #000;
+        font-weight: 500;
+        font-size: 55px;
+        line-height: 55px;
+    }
+
+    &__description {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        min-width: 240px;
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 78px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 16px;
+    border-radius: 3px;
+    transform: translateX(-50%);
+
+    &:focus-within {
+        outline: thin dotted;
+        outline: 5px auto -webkit-focus-ring-color;
+    }
+
+    li {
+        display: block;
+        margin-right: 18px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    button {
+        position: relative;
+        display: block;
+        padding: 0;
+        width: 18px;
+        height: 18px;
+        border: none;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .slick-active {
+        button {
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                border: 2px solid #c1c1c1;
+                border-radius: 50%;
+                background-color: transparent;
+                content: '';
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}

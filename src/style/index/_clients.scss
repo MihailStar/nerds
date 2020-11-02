@@ -1,0 +1,53 @@
+.clients {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 50px 0 40px;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        flex: none;
+        width: 260px;
+
+        &::after {
+            $widht: 2px;
+            position: absolute;
+            top: 14px;
+            right: -(20px + $widht / 2);
+            bottom: 24px;
+            width: $widht;
+            background-color: #eee;
+            content: '';
+        }
+
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &__link {
+        margin: auto;
+        opacity: .2;
+        transition: opacity $transition-delay;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: .1;
+        }
+    }
+
+    &__image {
+        display: block;
+    }
+}

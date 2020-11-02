@@ -1,0 +1,13 @@
+<section class="clients">
+    <h2 class="visually-hidden">Клиенты</h2>
+
+    <div class="wrapper wrapper_border">
+        <ul class="clients__list">
+            {% for item in clients %}
+            <li class="clients__item">
+                <a class="clients__link" href="{{ item.link }}"><img class="clients__image" src="{{ item.image }}" alt="Логотип {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}"><span class="visually-hidden">{{ item.title }}</span></a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

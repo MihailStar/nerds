@@ -1,0 +1,51 @@
+<section class="filters">
+    <h2 class="visually-hidden">Фильтр шаблонов</h2>
+
+    <form class="filters-form" action="/echo" method="get">
+        <fieldset class="filters-form__fieldset price">
+            <legend class="filters-form__title price__title">Стоимость:</legend>
+
+            <div class="price__range-slider">
+                <div id="range-slider" data-min="0" data-max="22000" data-init-min="800"
+                data-init-max="15000" data-step="100"></div>
+            </div>
+
+            <div class="price__range-inputs">
+                {% for item in filters.price %}
+                <label class="price__label">
+                    <span class="price__text">{{ item.title }}</span>
+                    <input class="price__range-input" id="{{ item.name }}" name="{{ item.name }}" type="number" value="{{ item.value }}" min="0" max="22000" step="100">
+                </label>
+                {% endfor %}
+            </div>
+        </fieldset>
+
+        <fieldset class="filters-form__fieldset">
+            <legend class="filters-form__title">Сетка:</legend>
+
+            <ul class="filters-form__list">
+                {% for item in filters.grid %}
+                <li class="filters-form__item">
+                    <input class="filters-form__radio" id="{{ item.value }}" name="grid" type="radio" value="{{ item.value }}"{{ ' checked' if item.checked }}>
+                    <label class="filters-form__radio-label" for="{{ item.value }}">{{ item.title }}</label>
+                </li>
+                {% endfor %}
+            </ul>
+        </fieldset>
+
+        <fieldset class="filters-form__fieldset">
+            <legend class="filters-form__title">Особенности:</legend>
+
+            <ul class="filters-form__list">
+                {% for item in filters.features %}
+                <li class="filters-form__item">
+                    <input class="filters-form__checkbox" id="{{ item.name }}" name="{{ item.name }}" type="checkbox"{{ ' checked' if item.checked }}>
+                    <label class="filters-form__checkbox-label" for="{{ item.name }}">{{ item.title }}</label>
+                </li>
+                {% endfor %}
+            </ul>
+        </fieldset>
+
+        <button class="button button_gray filters-form__button" type="submit">Показать</button>
+    </form>
+</section>

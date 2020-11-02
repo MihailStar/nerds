@@ -1,0 +1,42 @@
+<section class="catalog">
+    <h2 class="visually-hidden">Каталог шаблонов</h2>
+
+    <section class="sorting">
+        <h3 class="sorting__title">Сортировать:</h3>
+
+        <div class="sorting__options">
+            <a class="sorting__link sorting__link_active">По цене</a>
+            <a class="sorting__link" href="javascript:void(0);">По типу</a>
+            <a class="sorting__link" href="javascript:void(0);">По названию</a>
+            <a class="sorting__link sorting__link_down sorting__link_active"><span class="visually-hidden">По убыванию</span></a>
+            <a class="sorting__link sorting__link_up" href="javascript:void(0);"><span class="visually-hidden">По возрастанию</span></a>
+        </div>
+    </section>
+
+    <div class="catalog__wrapper">
+        {% for item in templates %}
+        <article class="template" tabindex="0">
+            <img class="template__image" src="{{ item.image }}" alt="{{ item.title }}" width="360" height="576">
+            <div class="template__information">
+                <h3 class="template__title">{{ item.title }}</h3>
+                <p class="template__description">{{ item.description | safe }}</p>
+                <a class="button template__button" href="{{ item.link }}">{{ item.price }} руб.</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+    <ul class="pagination">
+        <li class="pagination__item pagination__item_active">
+            <a class="button button_gray pagination__button">1</a>
+        </li>
+        {% for i in range(2, 4) %}
+        <li class="pagination__item">
+            <a class="button button_gray pagination__button" href="javascript:void(0);">{{ i }}</a>
+        </li>
+        {% endfor %}
+        <li class="pagination__item">
+            <a class="button button_gray pagination__button_big" href="javascript:void(0);">Следующая</a>
+        </li>
+    </ul>
+</section>

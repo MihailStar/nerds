@@ -1,0 +1,129 @@
+.footer {
+    padding-top: 80px;
+}
+
+.map {
+    min-height: 414px;
+    background-color: #eee;
+}
+
+.address {
+    position: absolute;
+    z-index: 1;
+    padding-top: 52px;
+
+    &__back {
+        padding: 50px;
+        padding-bottom: 48px;
+        width: 320px;
+        background-color: #fff;
+    }
+
+    &__title {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 24px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    &__address {
+        margin-top: 0;
+        margin-bottom: 18px;
+        line-height: 18px;
+    }
+
+    &__phone {
+        margin-top: 0;
+        margin-bottom: 36px;
+        line-height: 18px;
+    }
+
+    &__button {
+        min-width: 220px;
+    }
+}
+
+.social {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0;
+
+    &__list {
+        display: flex;
+        flex: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        width: 360px;
+    }
+
+    &__item {
+        display: block;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #e1e1e1;
+        box-shadow: none;
+        transition: background-color 200ms, box-shadow 200ms;
+
+        &:hover,
+        &:focus {
+            outline: none;
+            background-color: #e74246;
+            box-shadow: none;
+        }
+
+        &:active {
+            background-color: #d7373b;
+            box-shadow: inset 0 3px 0 0 #c13135;
+        }
+
+        &:active .icon-vkontakte,
+        &:active .icon-facebook,
+        &:active .icon-instagram {
+            opacity: .3;
+        }
+    }
+
+    &__promo {
+        flex: none;
+        width: 760px;
+    }
+
+    &__lead {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 6px;
+        color: #000;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    &__descripton {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #444;
+    }
+}
+
+.icon-vkontakte,
+.icon-facebook,
+.icon-instagram {
+    margin: auto;
+    transition: opacity 200ms;
+    fill: #fff;
+}

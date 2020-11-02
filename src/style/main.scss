@@ -1,0 +1,136 @@
+$transition-delay: 200ms;
+
+@import url('../../node_modules/magnific-popup/dist/magnific-popup.css');
+
+@import url('../../node_modules/nouislider/distribute/nouislider.css');
+
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+
+@import './_mixin.scss';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 1200px;
+    background-color: #fff;
+    color: #283136;
+    font: 400 16px/24px 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    @include visually-hidden;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1160px;
+
+    &_border {
+        border-bottom: 2px solid #eee;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 20px 16px;
+    min-width: 160px;
+    border: none;
+    border-top: 3px solid #fb565a;
+    border-radius: 3px;
+    background-color: #fb565a;
+    color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font: inherit;
+    font-weight: 500;
+    line-height: 18px;
+    cursor: pointer;
+    transition: all $transition-delay;
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border-color: #e74246;
+        background-color: #e74246;
+    }
+
+    &:active {
+        border-color: #c13135;
+        background-color: #d7373b;
+        color: rgba(#fff, .3);
+    }
+
+    &_green {
+        border-top-color: #00ca74;
+        background-color: #00ca74;
+
+        &:hover,
+        &:focus {
+            border-color: #00bc6c;
+            background-color: #00bc6c;
+        }
+
+        &:active {
+            border-color: #009958;
+            background-color: #00aa62;
+        }
+    }
+
+    &_yellow {
+        border-top-color: #efc84a;
+        background-color: #efc84a;
+
+        &:hover,
+        &:focus {
+            border-color: #eab534;
+            background-color: #eab534;
+        }
+
+        &:active {
+            border-color: #ce961f;
+            background-color: #e5a722;
+        }
+    }
+
+    &_gray {
+        border-top-color: #eee;
+        background-color: #eee;
+        color: #000;
+
+        &:hover,
+        &:focus {
+            border-color: #dfdfdf;
+            background-color: #dfdfdf;
+        }
+
+        &:active {
+            border-color: #bfbfbf;
+            background-color: #d5d5d5;
+            color: rgba(#000, .3);
+        }
+    }
+}
+
+@import './_header.scss';
+
+@import './_heading.scss';
+
+@import './index/__main.scss';
+
+@import './shop/__main.scss';
+
+@import './_footer.scss';
+
+@import './_popup.scss';
